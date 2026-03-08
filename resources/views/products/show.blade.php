@@ -3,25 +3,25 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {{-- Breadcrumb --}}
         <nav class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-6">
-            <a href="{{ route('home') }}" class="hover:text-indigo-600">Home</a>
+            <a href="{{ route('home') }}" class="hover:text-emerald-600">Home</a>
             <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            <a href="{{ route('products.index') }}" class="hover:text-indigo-600">Horses</a>
+            <a href="{{ route('products.index') }}" class="hover:text-emerald-600">Horses</a>
             <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             <span class="text-gray-900 dark:text-white font-medium">{{ $listing->horse->registered_name }}</span>
         </nav>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {{-- Image --}}
-            <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700">
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700 flex items-center justify-center">
                 <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                      alt="{{ $listing->horse->registered_name }}"
-                     class="w-full aspect-[4/3] object-cover">
+                     class="w-full h-auto max-h-[500px] object-contain">
             </div>
 
             {{-- Details --}}
             <div>
                 <div class="flex items-center gap-2 mb-3">
-                    <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-sm font-medium rounded-full">{{ $listing->horse->breed?->breed_name ?? 'Unknown Breed' }}</span>
+                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-sm font-medium rounded-full">{{ $listing->horse->breed?->breed_name ?? 'Unknown Breed' }}</span>
                     @if($listing->status === 'active')
                         <span class="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 text-sm font-medium rounded-full">Available</span>
                     @else
@@ -31,7 +31,7 @@
 
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">{{ $listing->horse->registered_name }}</h1>
 
-                <p class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-6">¥{{ number_format($listing->list_price) }}</p>
+                <p class="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-6">¥{{ number_format($listing->list_price) }}</p>
 
                 {{-- Horse Info Table --}}
                 <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700 divide-y divide-gray-200 dark:divide-gray-700 mb-6">
@@ -78,12 +78,12 @@
                     @auth
                         <form method="POST" action="{{ route('cart.add', $listing) }}">
                             @csrf
-                            <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition text-lg shadow-lg hover:shadow-xl">
+                            <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition text-lg shadow-lg hover:shadow-xl">
                                 Add to Cart 🛒
                             </button>
                         </form>
                     @else
-                        <a href="{{ route('login') }}" class="block w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition text-lg shadow-lg hover:shadow-xl text-center">
+                        <a href="{{ route('login') }}" class="block w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition text-lg shadow-lg hover:shadow-xl text-center">
                             Login to Purchase
                         </a>
                     @endauth

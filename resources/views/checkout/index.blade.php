@@ -18,7 +18,7 @@
                             <p class="text-sm text-gray-500 dark:text-gray-400">{{ $item->listing->horse->breed?->breed_name }}</p>
                         </div>
                         <div class="text-right">
-                            <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">¥{{ number_format($item->listing->list_price) }}</span>
+                            <span class="text-lg font-bold text-emerald-600 dark:text-emerald-400">¥{{ number_format($item->listing->list_price) }}</span>
                         </div>
                     </div>
                 @endforeach
@@ -33,15 +33,15 @@
                         @csrf
                         <div class="space-y-3 mb-6">
                             <label class="flex items-center p-3 border border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                                <input type="radio" name="payment_method" value="credit_card" checked class="text-indigo-600 focus:ring-indigo-500">
+                                <input type="radio" name="payment_method" value="credit_card" checked class="text-emerald-600 focus:ring-emerald-500">
                                 <span class="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">💳 Credit Card</span>
                             </label>
                             <label class="flex items-center p-3 border border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                                <input type="radio" name="payment_method" value="bank_transfer" class="text-indigo-600 focus:ring-indigo-500">
+                                <input type="radio" name="payment_method" value="bank_transfer" class="text-emerald-600 focus:ring-emerald-500">
                                 <span class="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">🏦 Bank Transfer</span>
                             </label>
                             <label class="flex items-center p-3 border border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                                <input type="radio" name="payment_method" value="promptpay" class="text-indigo-600 focus:ring-indigo-500">
+                                <input type="radio" name="payment_method" value="promptpay" class="text-emerald-600 focus:ring-emerald-500">
                                 <span class="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">📱 PromptPay</span>
                             </label>
                         </div>
@@ -57,12 +57,12 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-sm">
+                        <button type="submit" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow-sm">
                             Confirm Purchase
                         </button>
                     </form>
 
-                    <a href="{{ route('cart.index') }}" class="block text-center text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 mt-3">
+                    <a href="{{ route('cart.index') }}" class="block text-center text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 mt-3">
                         ← Back to Cart
                     </a>
                 </div>

@@ -7,11 +7,11 @@
             <div class="lg:col-span-1">
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-indigo-100 dark:bg-indigo-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">{{ strtoupper(substr($user->name, 0, 1)) }}</span>
+                        <div class="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-bold text-emerald-600 dark:text-emerald-400">{{ strtoupper(substr($user->name, 0, 1)) }}</span>
                         </div>
                         <h2 class="text-xl font-bold text-gray-900 dark:text-white">{{ $user->name }}</h2>
-                        <span class="inline-block px-2.5 py-0.5 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-medium rounded-full mt-1">{{ ucfirst($user->role) }}</span>
+                        <span class="inline-block px-2.5 py-0.5 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-medium rounded-full mt-1">{{ ucfirst($user->role) }}</span>
                     </div>
                     <div class="space-y-3 text-sm">
                         <div class="flex justify-between">
@@ -60,7 +60,7 @@
                     @else
                         <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-8 text-center border border-gray-200 dark:border-gray-700">
                             <p class="text-gray-500 dark:text-gray-400">You don't own any horses yet.</p>
-                            <a href="{{ route('products.index') }}" class="inline-block mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline">Browse Available Horses →</a>
+                            <a href="{{ route('products.index') }}" class="inline-block mt-3 text-emerald-600 dark:text-emerald-400 font-medium hover:underline">Browse Available Horses →</a>
                         </div>
                     @endif
                 </div>

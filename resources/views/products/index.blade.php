@@ -12,20 +12,20 @@
                 <div class="flex-1">
                     <input type="text" name="search" value="{{ request('search') }}"
                            placeholder="Search by name..."
-                           class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-indigo-500 focus:border-indigo-500">
+                           class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-emerald-500 focus:border-emerald-500">
                 </div>
-                <select name="breed" class="rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-indigo-500 focus:border-indigo-500">
+                <select name="breed" class="rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-emerald-500 focus:border-emerald-500">
                     <option value="">All Breeds</option>
                     @foreach($breeds as $breed)
                         <option value="{{ $breed->id }}" {{ request('breed') == $breed->id ? 'selected' : '' }}>{{ $breed->breed_name }}</option>
                     @endforeach
                 </select>
-                <select name="sort" class="rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-indigo-500 focus:border-indigo-500">
+                <select name="sort" class="rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-emerald-500 focus:border-emerald-500">
                     <option value="">Newest First</option>
                     <option value="price_asc" {{ request('sort') === 'price_asc' ? 'selected' : '' }}>Price: Low to High</option>
                     <option value="price_desc" {{ request('sort') === 'price_desc' ? 'selected' : '' }}>Price: High to Low</option>
                 </select>
-                <button type="submit" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium">
+                <button type="submit" class="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition font-medium">
                     Filter
                 </button>
                 @if(request()->hasAny(['search', 'breed', 'sort']))
@@ -43,18 +43,18 @@
                             <div class="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700">
                                 <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                                      alt="{{ $listing->horse->registered_name }}"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
                             </div>
                             <div class="p-5">
                                 <div class="flex items-center gap-2 mb-2">
-                                    <span class="px-2 py-0.5 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-medium rounded-full">{{ $listing->horse->breed?->breed_name ?? 'Unknown' }}</span>
+                                    <span class="px-2 py-0.5 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-medium rounded-full">{{ $listing->horse->breed?->breed_name ?? 'Unknown' }}</span>
                                     <span class="px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-medium rounded-full">{{ ucfirst($listing->horse->sex) }}</span>
                                 </div>
-                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">{{ $listing->horse->registered_name }}</h3>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">{{ $listing->horse->registered_name }}</h3>
                                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">{{ $listing->horse->stable?->stable_name ?? 'Unknown Stable' }}</p>
                                 <p class="text-xs text-gray-400 dark:text-gray-500 mb-3 line-clamp-2">{{ Str::limit($listing->horse->description, 80) }}</p>
                                 <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">¥{{ number_format($listing->list_price) }}</span>
+                                    <span class="text-xl font-bold text-emerald-600 dark:text-emerald-400">¥{{ number_format($listing->list_price) }}</span>
                                     <span class="inline-flex items-center text-sm text-green-600 dark:text-green-400 font-medium">
                                         <span class="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span>
                                         On Sale

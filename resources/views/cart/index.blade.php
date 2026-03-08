@@ -17,7 +17,7 @@
                                 {{ $item->listing->horse->breed?->breed_name ?? 'Unknown Breed' }} &bull;
                                 {{ $item->listing->horse->stable?->stable_name ?? 'Unknown Stable' }}
                             </p>
-                            <p class="text-lg font-bold text-indigo-600 dark:text-indigo-400 mt-1">¥{{ number_format($item->listing->list_price) }}</p>
+                            <p class="text-lg font-bold text-emerald-600 dark:text-emerald-400 mt-1">¥{{ number_format($item->listing->list_price) }}</p>
                         </div>
                         <form method="POST" action="{{ route('cart.remove', $item) }}">
                             @csrf
@@ -40,7 +40,7 @@
                     <a href="{{ route('products.index') }}" class="flex-1 py-3 text-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition font-medium">
                         Continue Shopping
                     </a>
-                    <a href="{{ route('checkout.index') }}" class="flex-1 py-3 text-center bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl transition font-bold shadow-sm">
+                    <a href="{{ route('checkout.index') }}" class="flex-1 py-3 text-center bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl transition font-bold shadow-sm">
                         Proceed to Checkout
                     </a>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="text-6xl mb-4">🛒</div>
                 <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">Your cart is empty</h3>
                 <p class="text-gray-500 dark:text-gray-400 mb-6">Start browsing our horse collection!</p>
-                <a href="{{ route('products.index') }}" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition font-medium">
+                <a href="{{ route('products.index') }}" class="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 transition font-medium">
                     Browse Horses
                 </a>
             </div>
