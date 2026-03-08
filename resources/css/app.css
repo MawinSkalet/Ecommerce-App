@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ── Uma Musume Theme ── */
+@layer base {
+    :root {
+        --uma-green: #00B764;
+        --uma-teal: #0d9488;
+        --uma-gold: #f59e0b;
+        --uma-sky: #38bdf8;
+    }
+}
+
+@layer components {
+    /* Glassmorphism card style */
+    .uma-glass {
+        @apply bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border border-white/40 dark:border-gray-600/40;
+    }
+
+    /* Uma-themed gradient text */
+    .uma-gradient-text {
+        @apply bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent;
+    }
+
+    /* Gold accent shimmer */
+    .uma-gold-accent {
+        @apply text-amber-400 drop-shadow-[0_0_6px_rgba(245,158,11,0.4)];
+    }
+
+    /* Uma primary button */
+    .uma-btn-primary {
+        @apply bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-emerald-500/25;
+    }
+
+    /* Uma card hover effect */
+    .uma-card {
+        @apply bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700;
+    }
+}
