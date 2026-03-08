@@ -18,7 +18,7 @@
                     <p class="text-sm text-gray-500 dark:text-gray-400">Total Horses</p>
                     <p class="text-2xl font-bold text-gray-900 dark:text-white mt-1">{{ number_format($stats['total_horses']) }}</p>
                 </div>
-                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
+                <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-lg flex items-center justify-center">
                     <span class="text-2xl">🐴</span>
                 </div>
             </div>
@@ -51,7 +51,7 @@
     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
         <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
             <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Recent Orders</h2>
-            <a href="{{ route('admin.orders.index') }}" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">View All</a>
+            <a href="{{ route('admin.orders.index') }}" class="text-sm text-emerald-600 dark:text-emerald-400 hover:underline">View All</a>
         </div>
         <div class="overflow-x-auto">
             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -69,7 +69,7 @@
                     @forelse($stats['recent_orders'] as $order)
                         <tr>
                             <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                <a href="{{ route('admin.orders.show', $order) }}" class="text-indigo-600 dark:text-indigo-400 hover:underline">#{{ $order->id }}</a>
+                                <a href="{{ route('admin.orders.show', $order) }}" class="text-emerald-600 dark:text-emerald-400 hover:underline">#{{ $order->id }}</a>
                             </td>
                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">{{ $order->user->name }}</td>
                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">{{ $order->listing->horse->registered_name ?? 'N/A' }}</td>

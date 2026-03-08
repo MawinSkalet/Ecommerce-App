@@ -1,7 +1,7 @@
 <x-layouts.admin title="Manage Listings">
     <div class="flex items-center justify-between mb-6">
         <p class="text-gray-500 dark:text-gray-400">{{ $listings->total() }} listings total</p>
-        <a href="{{ route('admin.listings.create') }}" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium text-sm">+ Create Listing</a>
+        <a href="{{ route('admin.listings.create') }}" class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition font-medium text-sm">+ Create Listing</a>
     </div>
 
     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -30,7 +30,7 @@
                             <td class="px-4 py-3 text-sm text-gray-500">{{ $listing->created_at->format('M d, Y') }}</td>
                             <td class="px-4 py-3">
                                 <div class="flex items-center gap-2">
-                                    <a href="{{ route('admin.listings.edit', $listing) }}" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Edit</a>
+                                    <a href="{{ route('admin.listings.edit', $listing) }}" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">Edit</a>
                                     <form method="POST" action="{{ route('admin.listings.destroy', $listing) }}" onsubmit="return confirm('Delete this listing?')">
                                         @csrf @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:text-red-800 text-sm font-medium">Delete</button>

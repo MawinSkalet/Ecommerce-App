@@ -27,7 +27,7 @@
                     </div>
                     <div class="flex justify-between">
                         <dt class="text-gray-500 dark:text-gray-400">Amount</dt>
-                        <dd class="font-bold text-indigo-600 dark:text-indigo-400">¥{{ number_format($order->total_amount) }}</dd>
+                        <dd class="font-bold text-emerald-600 dark:text-emerald-400">¥{{ number_format($order->total_amount) }}</dd>
                     </div>
                     <div class="flex justify-between">
                         <dt class="text-gray-500 dark:text-gray-400">Date</dt>
@@ -41,13 +41,13 @@
                         @csrf @method('PUT')
                         <div class="flex-1">
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Order Status</label>
-                            <select name="status" class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-indigo-500 text-sm">
+                            <select name="status" class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-emerald-500 text-sm">
                                 @foreach(['pending', 'confirmed', 'completed', 'cancelled'] as $s)
                                     <option value="{{ $s }}" {{ $order->status === $s ? 'selected' : '' }}>{{ ucfirst($s) }}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition text-sm font-medium">Update</button>
+                        <button type="submit" class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition text-sm font-medium">Update</button>
                     </form>
                 </div>
             </div>
@@ -89,7 +89,7 @@
         </div>
 
         <div class="mt-6">
-            <a href="{{ route('admin.orders.index') }}" class="text-indigo-600 dark:text-indigo-400 hover:underline text-sm font-medium">← Back to Orders</a>
+            <a href="{{ route('admin.orders.index') }}" class="text-emerald-600 dark:text-emerald-400 hover:underline text-sm font-medium">← Back to Orders</a>
         </div>
     </div>
 </x-layouts.admin>

@@ -40,7 +40,7 @@
                             </td>
                             <td class="px-4 py-3 text-sm text-gray-500">{{ $order->datetime->format('M d, Y') }}</td>
                             <td class="px-4 py-3">
-                                <a href="{{ route('admin.orders.show', $order) }}" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">View</a>
+                                <a href="{{ route('admin.orders.show', $order) }}" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">View</a>
                             </td>
                         </tr>
                     @empty

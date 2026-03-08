@@ -25,14 +25,14 @@
                             <td class="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{{ $user->email }}</td>
                             <td class="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">{{ $user->phone ?? '-' }}</td>
                             <td class="px-4 py-3">
-                                <span class="px-2 py-0.5 text-xs font-medium rounded-full {{ $user->role === 'admin' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800' }}">
+                                <span class="px-2 py-0.5 text-xs font-medium rounded-full {{ $user->role === 'admin' ? 'bg-teal-100 text-teal-800' : 'bg-blue-100 text-blue-800' }}">
                                     {{ ucfirst($user->role) }}
                                 </span>
                             </td>
                             <td class="px-4 py-3 text-sm text-gray-500">{{ $user->created_at->format('M d, Y') }}</td>
                             <td class="px-4 py-3">
                                 <div class="flex items-center gap-2">
-                                    <a href="{{ route('admin.users.edit', $user) }}" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Edit</a>
+                                    <a href="{{ route('admin.users.edit', $user) }}" class="text-emerald-600 hover:text-emerald-800 text-sm font-medium">Edit</a>
                                     @if($user->id !== auth()->id())
                                         <form method="POST" action="{{ route('admin.users.destroy', $user) }}" onsubmit="return confirm('Delete this user?')">
                                             @csrf @method('DELETE')
