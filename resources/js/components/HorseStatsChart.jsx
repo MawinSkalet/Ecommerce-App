@@ -47,7 +47,7 @@ const CustomTooltip = ({ active, payload }) => {
         return (
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2">
                 <p className="font-bold text-gray-900 dark:text-white text-sm">{data.stat}</p>
-                <p className="text-indigo-600 dark:text-indigo-400 font-mono font-bold">
+                <p className="text-emerald-600 dark:text-emerald-400 font-mono font-bold">
                     {data.value} <span style={{ color: getRankColor(data.value) }}>({getRank(data.value)})</span>
                 </p>
             </div>
@@ -66,7 +66,7 @@ export default function HorseStatsChart({ horseId, horseName, stats: rawStats })
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
                     <span>⚡</span> Attributes
                 </h3>
-                <span className="text-sm font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 px-3 py-1 rounded-full font-bold">
+                <span className="text-sm font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full font-bold">
                     Total: {totalPower}
                 </span>
             </div>
@@ -88,8 +88,8 @@ export default function HorseStatsChart({ horseId, horseName, stats: rawStats })
                     <Radar
                         name={horseName}
                         dataKey="value"
-                        stroke="#6366f1"
-                        fill="#6366f1"
+                        stroke="#10b981"
+                        fill="#10b981"
                         fillOpacity={0.25}
                         strokeWidth={2}
                     />
