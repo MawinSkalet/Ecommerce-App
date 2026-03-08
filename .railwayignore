@@ -1,0 +1,5 @@
+compose.yaml
+docker-compose.yml
+nixpacks.toml
+.sail
+vendor/laravel/sail
