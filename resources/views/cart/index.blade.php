@@ -9,6 +9,9 @@
                         <div class="w-24 h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0">
                             <img src="{{ $item->listing->horse->photo_url ?? 'https://placehold.co/200x200/e2e8f0/94a3b8?text=No+Photo' }}"
                                  alt="{{ $item->listing->horse->registered_name }}"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="200" height="200"
                                  class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1 min-w-0">

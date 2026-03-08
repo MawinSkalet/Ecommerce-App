@@ -43,6 +43,9 @@
                             <div class="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700">
                                 <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                                      alt="{{ $listing->horse->registered_name }}"
+                                     loading="lazy"
+                                     decoding="async"
+                                     width="600" height="400"
                                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
                             </div>
                             <div class="p-5">

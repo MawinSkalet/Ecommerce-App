@@ -15,6 +15,10 @@
             <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700 flex items-center justify-center">
                 <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                      alt="{{ $listing->horse->registered_name }}"
+                     loading="eager"
+                     decoding="async"
+                     fetchpriority="high"
+                     width="600" height="400"
                      class="w-full h-auto max-h-[500px] object-contain">
             </div>
 

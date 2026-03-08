@@ -1,3 +1,6 @@
+@push('head')
+    <link rel="preload" as="image" href="{{ asset('images/bg-uma.jpg') }}">
+@endpush
 <x-layouts.shop title="Home">
     {{-- Hero Section --}}
     <section class="relative overflow-hidden bg-cover" style="background-image: url('{{ asset('images/bg-uma.jpg') }}'); background-position: center 20%;">
@@ -41,6 +44,9 @@
                         <div class="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700">
                             <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                                  alt="{{ $listing->horse->registered_name }}"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="600" height="400"
                                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-6">
@@ -82,6 +88,9 @@
                         <div class="w-32 h-32 flex-shrink-0 overflow-hidden bg-gray-200 dark:bg-gray-600">
                             <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/200x200/e2e8f0/94a3b8?text=No+Photo' }}"
                                  alt="{{ $listing->horse->registered_name }}"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="200" height="200"
                                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 flex flex-col justify-center">
