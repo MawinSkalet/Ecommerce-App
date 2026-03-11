@@ -10,7 +10,7 @@ return new class extends Migration
         $mapping = [
             'Special Week' => '/images/horses/special_week.png',
             'Silence Suzuka' => '/images/horses/silence_suzuka.png',
-            'Tokai Teio' => '/images/horses/tokai_teio.png',
+            'Tokai Teio' => '/images/horses/tokaiteio.png',
             'Mejiro McQueen' => '/images/horses/mejiro_mcqueen.png',
             'Vodka' => '/images/horses/vodka.png',
             'Gold Ship' => '/images/horses/gold_ship.png',

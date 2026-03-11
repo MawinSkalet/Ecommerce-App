@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
                 'birth_date' => '2018-04-20',
                 'description' => 'The Emperor of the turf, admired for her regal bearing and unbreakable spirit. Has overcome multiple injuries to return triumphantly to the racecourse. A symbol of resilience.',
                 'status' => 'available',
-                'photo_url' => '/images/horses/tokai_teio.png',
+                'photo_url' => '/images/horses/tokaiteio.png',
                 'breed_id' => 1,
                 'stable_id' => 2,
                 'stat_speed' => 1000, 'stat_stamina' => 800, 'stat_power' => 850, 'stat_guts' => 900, 'stat_wisdom' => 800,
