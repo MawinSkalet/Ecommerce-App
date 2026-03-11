@@ -25,7 +25,7 @@
                             <td class="px-4 py-3 text-sm text-gray-500">{{ $horse->id }}</td>
                             <td class="px-4 py-3">
                                 <div class="flex items-center gap-3">
-                                    <img src="{{ $horse->photo_url ?? 'https://placehold.co/40x40/e2e8f0/94a3b8?text=?' }}" class="w-10 h-10 rounded-lg object-cover" alt="">
+                                    <img src="{{ $horse->photo_url ?? 'https://placehold.co/40x40/e2e8f0/94a3b8?text=?' }}" class="w-10 h-10 rounded-lg object-contain object-bottom bg-gray-100 dark:bg-gray-700" alt="">
                                     <span class="text-sm font-medium text-gray-900 dark:text-white">{{ $horse->registered_name }}</span>
                                 </div>
                             </td>

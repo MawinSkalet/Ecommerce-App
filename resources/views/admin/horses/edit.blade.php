@@ -66,7 +66,7 @@
 
             {{-- Uma Musume Attributes --}}
             <div class="border-t border-gray-200 dark:border-gray-700 pt-5">
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-1 flex items-center gap-2">⚡ Attributes <span class="text-xs font-normal text-gray-500">(1 – 1200)</span></h3>
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-1 flex items-center gap-2"><svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg> Attributes <span class="text-xs font-normal text-gray-500">(1 – 1200)</span></h3>
                 <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">Uma Musume-style racing stats for this horse</p>
                 <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
                     @foreach(['stat_speed' => 'Speed', 'stat_stamina' => 'Stamina', 'stat_power' => 'Power', 'stat_guts' => 'Guts', 'stat_wisdom' => 'Wisdom'] as $field => $label)

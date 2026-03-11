@@ -41,13 +41,13 @@
             @foreach($featured as $listing)
                 <a href="{{ route('products.show', $listing) }}" class="group">
                     <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 group-hover:-translate-y-1">
-                        <div class="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700">
+                        <div class="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-end justify-center">
                             <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                                  alt="{{ $listing->horse->registered_name }}"
                                  loading="lazy"
                                  decoding="async"
                                  width="600" height="400"
-                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                 class="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-2 mb-2">
@@ -85,13 +85,13 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($newest as $listing)
                     <a href="{{ route('products.show', $listing) }}" class="group flex bg-gray-50 dark:bg-gray-700/50 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-600">
-                        <div class="w-32 h-32 flex-shrink-0 overflow-hidden bg-gray-200 dark:bg-gray-600">
+                        <div class="w-32 h-32 flex-shrink-0 overflow-hidden bg-gray-200 dark:bg-gray-600 flex items-end justify-center">
                             <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/200x200/e2e8f0/94a3b8?text=No+Photo' }}"
                                  alt="{{ $listing->horse->registered_name }}"
                                  loading="lazy"
                                  decoding="async"
                                  width="200" height="200"
-                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                 class="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4 flex flex-col justify-center">
                             <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">{{ $listing->horse->breed?->breed_name ?? 'Unknown' }}</span>

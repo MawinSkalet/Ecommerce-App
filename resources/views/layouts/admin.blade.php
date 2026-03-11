@@ -15,7 +15,7 @@
         <aside class="w-64 bg-gray-900 dark:bg-gray-950 text-white flex-shrink-0 hidden md:flex flex-col">
             <div class="px-6 py-5 border-b border-gray-800">
                 <a href="{{ route('admin.dashboard') }}" class="flex items-center space-x-2">
-                    <span class="text-2xl">🐴</span>
+                    <img src="{{ asset('images/logo.svg') }}" alt="UmaShop" class="w-7 h-7">
                     <span class="text-lg font-bold">UmaShop Admin</span>
                 </a>
             </div>

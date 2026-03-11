@@ -1,7 +1,7 @@
 <x-layouts.shop title="Order Successful">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-12">
-            <div class="text-6xl mb-6">🎉</div>
+            <div class="mb-6 flex justify-center"><svg class="w-16 h-16 text-emerald-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
             <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Purchase Successful!</h1>
             <p class="text-gray-500 dark:text-gray-400 mb-2">Congratulations! Your horse purchase has been confirmed.</p>
             <p class="text-gray-500 dark:text-gray-400 mb-8">The horse ownership has been transferred to your account.</p>

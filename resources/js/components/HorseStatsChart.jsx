@@ -64,7 +64,7 @@ export default function HorseStatsChart({ horseId, horseName, stats: rawStats })
         <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
             <div className="flex items-center justify-between mb-2">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                    <span>⚡</span> Attributes
+                    <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg> Attributes
                 </h3>
                 <span className="text-sm font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full font-bold">
                     Total: {totalPower}

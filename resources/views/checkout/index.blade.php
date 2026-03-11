@@ -8,10 +8,10 @@
                 <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Order Summary</h2>
                 @foreach($cart->items as $item)
                     <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 flex items-center gap-4">
-                        <div class="w-20 h-20 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0">
+                        <div class="w-20 h-20 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-end justify-center">
                             <img src="{{ $item->listing->horse->photo_url ?? 'https://placehold.co/200x200/e2e8f0/94a3b8?text=No+Photo' }}"
                                  alt="{{ $item->listing->horse->registered_name }}"
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-contain object-bottom">
                         </div>
                         <div class="flex-1">
                             <h3 class="font-bold text-gray-900 dark:text-white">{{ $item->listing->horse->registered_name }}</h3>

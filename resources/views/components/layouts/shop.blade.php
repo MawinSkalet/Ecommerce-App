@@ -17,7 +17,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center space-x-8">
                     <a href="{{ route('home') }}" class="flex items-center space-x-2">
-                        <span class="text-2xl">🐴</span>
+                        <img src="{{ asset('images/logo.svg') }}" alt="UmaShop" class="w-8 h-8">
                         <span class="text-xl font-bold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">UmaShop</span>
                     </a>
                     <div class="hidden sm:flex space-x-1">
@@ -90,7 +90,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-3">
-                        <span class="text-2xl">🐴</span>
+                        <img src="{{ asset('images/logo.svg') }}" alt="UmaShop" class="w-7 h-7">
                         <span class="text-lg font-bold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">UmaShop</span>
                     </div>
                     <p class="text-sm text-gray-500 dark:text-gray-400">Uma Musume-themed horse-selling web application. Browse, purchase, and own unique horses from our store.</p>

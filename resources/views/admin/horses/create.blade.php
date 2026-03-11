@@ -1,6 +1,6 @@
 <x-layouts.admin title="Add Horse">
     <div class="max-w-2xl">
-        <form method="POST" action="{{ route('admin.horses.store') }}" class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 space-y-5">
+        <form method="POST" action="{{ route('admin.horses.store') }}" enctype="multipart/form-data" class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 space-y-5">
             @csrf
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Registered Name *</label>
@@ -51,9 +51,10 @@
                 </select>
             </div>
             <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Photo URL</label>
-                <input type="url" name="photo_url" value="{{ old('photo_url') }}" placeholder="https://..."
-                       class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-emerald-500">
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Photo</label>
+                <input type="file" name="photo" accept="image/jpeg,image/png,image/webp"
+                       class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-emerald-500 text-sm file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-emerald-50 file:text-emerald-700 dark:file:bg-emerald-900 dark:file:text-emerald-300 file:font-medium file:cursor-pointer">
+                @error('photo') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
             </div>
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Description</label>
@@ -63,8 +64,7 @@
 
             {{-- Uma Musume Attributes --}}
             <div class="border-t border-gray-200 dark:border-gray-700 pt-5">
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-1 flex items-center gap-2">⚡ Attributes <span class="text-xs font-normal text-gray-500">(1 – 1200)</span></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">Uma Musume-style racing stats for this horse</p>
+                <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-1 flex items-center gap-2"> Attributes <span class="text-xs font-normal text-gray-500">(1 – 1200)</span></h3>
                 <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
                     @foreach(['stat_speed' => 'Speed', 'stat_stamina' => 'Stamina', 'stat_power' => 'Power', 'stat_guts' => 'Guts', 'stat_wisdom' => 'Wisdom'] as $field => $label)
                         <div>

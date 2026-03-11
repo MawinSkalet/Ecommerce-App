@@ -40,13 +40,13 @@
                 @foreach($listings as $listing)
                     <a href="{{ route('products.show', $listing) }}" class="group">
                         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 group-hover:-translate-y-1">
-                            <div class="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700">
+                            <div class="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-end justify-center">
                                 <img src="{{ $listing->horse->photo_url ?? 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Photo' }}"
                                      alt="{{ $listing->horse->registered_name }}"
                                      loading="lazy"
                                      decoding="async"
                                      width="600" height="400"
-                                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                     class="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-300">
                             </div>
                             <div class="p-5">
                                 <div class="flex items-center gap-2 mb-2">
@@ -75,7 +75,7 @@
             </div>
         @else
             <div class="text-center py-16">
-                <div class="text-6xl mb-4">🐴</div>
+                <div class="mb-4 flex justify-center"><img src="{{ asset('images/logo.svg') }}" alt="No horses" class="w-16 h-16 opacity-40"></div>
                 <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">No horses found</h3>
                 <p class="text-gray-500 dark:text-gray-400">Try adjusting your search or filters.</p>
             </div>

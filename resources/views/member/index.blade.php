@@ -44,10 +44,10 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             @foreach($user->horses as $horse)
                                 <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden flex">
-                                    <div class="w-24 h-24 flex-shrink-0 bg-gray-100 dark:bg-gray-700">
+                                    <div class="w-24 h-24 flex-shrink-0 bg-gray-100 dark:bg-gray-700 flex items-end justify-center">
                                         <img src="{{ $horse->photo_url ?? 'https://placehold.co/200x200/e2e8f0/94a3b8?text=No+Photo' }}"
                                              alt="{{ $horse->registered_name }}"
-                                             class="w-full h-full object-cover">
+                                             class="w-full h-full object-contain object-bottom">
                                     </div>
                                     <div class="p-3 flex flex-col justify-center">
                                         <h3 class="font-bold text-gray-900 dark:text-white text-sm">{{ $horse->registered_name }}</h3>

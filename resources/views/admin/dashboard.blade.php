@@ -19,7 +19,7 @@
                     <p class="text-2xl font-bold text-gray-900 dark:text-white mt-1">{{ number_format($stats['total_horses']) }}</p>
                 </div>
                 <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-lg flex items-center justify-center">
-                    <span class="text-2xl">🐴</span>
+                    <img src="{{ asset('images/logo.svg') }}" alt="Horse" class="w-7 h-7">
                 </div>
             </div>
         </div>
